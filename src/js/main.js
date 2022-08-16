@@ -78,11 +78,11 @@ function init() {
     /** If sorting is in progress. */
     if (timestamp && !timeTaken && !loading && choices.length === battleNo - 1) {
       switch(ev.key) {
-        case 's': case '3':                   saveProgress('Progress'); break;
-        case 'h': case 'ArrowLeft':           pick('left'); break;
-        case 'l': case 'ArrowRight':          pick('right'); break;
-        case 'k': case '1': case 'ArrowUp':   pick('tie'); break;
-        case 'j': case '2': case 'ArrowDown': undo(); break;
+        case 'e':                             saveProgress('Progress'); break;
+        case 'a':                             pick('left'); break;
+        case 'd':                             pick('right'); break;
+        case 'w':                             pick('tie'); break;
+        case 's':                             undo(); break;
         default: break;
       }
     }

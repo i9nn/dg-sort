@@ -43,7 +43,7 @@ body {
 
 .progressfill {
   height: 40px;
-  background-color: rgb(0, 0, 0);
+  background-color: black;
   width: 0%;
 }
 
@@ -61,6 +61,13 @@ body {
   padding: 10%;
   grid-column: 2 / 3;
   cursor: pointer;
+  transition-duration: 0.2s;
+}
+
+.button:hover {
+  background-color: black;
+  color: white;
+  font-size: 20px;
 }
 
 .starting.start.button {
@@ -74,6 +81,7 @@ body {
 .starting.load.button {
   grid-row: span 3;
   display: none;
+  font-size: 1.2em;
 }
 
 .sorting.button, .finished.button {
@@ -129,12 +137,24 @@ body {
   margin: auto;
   grid-row: 1 / 7;
   cursor: pointer;
+  transition-duration: 0.5s;
+  border: 1px solid black;
+}
+
+.sorter > .image:hover {
+  filter:  contrast(2000%) grayscale(100%)
 }
 
 .sorter > .text {
   width: 120px;
   height: 60px;
   display: none;
+  transition-duration: 0.2s;
+}
+
+.sorter > .text:hover {
+  background-color: black;
+  color: white; 
 }
 
 .sorter > .text > p {
@@ -278,22 +298,26 @@ label:hover {
   margin: 2em auto 3em;
   display: block;
   text-align: center;
-  font-size: 0.6875em;
+  font-size: 0.78em;
   width: 80%;
   line-height: 1.2em;
 }
 
 a {
-  color: #990000;
+  color: #6e98c4;
   font-weight: bold;
   text-decoration: none;
   cursor: pointer;
-}
-
-a:hover {
-  color: #FF6600;
+  
+  transition-property: color;
+  transition-duration: 0.3s; 
 }
 
 a:visited {
-  color: #6600FF;
+  color: #79c5ed;
 }
+
+a:hover {
+  color: #000000;
+}
+
